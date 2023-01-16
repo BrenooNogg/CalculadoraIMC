@@ -1,0 +1,86 @@
+<!-- Lembre-se de deixar o index.html fora do diretório html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Crie o costume de sempre fechar as tags de autofechamento -->
+	<!-- <meta charset="utf-8"> -->
+	<meta charset="utf-8" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- <link rel="stylesheet" type="text/css" href="../css/app.css"> -->
+	<link rel="stylesheet" type="text/css" href="../css/app.css" />
+	<title>IMC - Índice de Massa Corporal</title>
+</head>
+<body>
+	<div id="principal">
+		<div class="conteudo">
+			<div class="introducao">				
+				<h1>IMC - Índice de Massa Muscular</h1>
+				<p>O IMC é um índice que mede se você está abaixo, dentro ou acima do peso, de acordo com a relação entre seu peso e altura. Descubra como calcular esse índice, quais os valores ideais, as exceções da tabela padrão, a especificidade do IMC para crianças e jovens e muito mais neste artigo completo.</p>
+				<!-- <br> -->
+				<br />
+			</div>
+			<div class="conteudo2">
+				<h2>Tabela do IMC</h2>
+				<table>
+					<tr>
+						<th>IMC</th>
+						<th>Classificação</th>
+					</tr>
+					<tr>
+						<td>Menor do que 18,5</td>
+						<td>Abaixo do peso</td>
+					</tr>
+					<tr>
+						<td>Entre 18,5 e 24,9</td>
+						<td>Peso normal</td>
+					</tr>
+					<tr>
+						<td>Entre 25 e 29,9</td>
+						<td>Acima do peso (sobrepeso)</td>
+					</tr>
+					<tr>
+						<td>Entre 30 e 34,9	</td>
+						<td>Obesidade I</td>
+					</tr>
+					<tr>
+						<td>Entre 35 e 39,9</td>
+						<td>Obesidade II</td>
+					</tr>
+					<tr>
+						<td>Maior que 40</td>
+						<td>Obesidade III</td>
+					</tr>
+				</table>
+				<!-- <br> -->
+				<br />
+				<h3>Calculadora de IMC:</h3>
+				<form id="form">
+					<!-- Quando você precisar colocar um caractere no meio do código como 'x', deixe sua colocação mais visível para ajudar na manutenção de código -->
+					<!-- Também lembre-se de fechar a tag input, ela também é autofechamento -->
+					<input type="number" name="peso" id="peso" placeholder="Peso(kg)" min="0" max="300" required> <!-- x -->
+					x
+					<input type="number" name="altura" id="altura" placeholder="Altura(m)" min="0" max="300" required>
+				</form>
+				<button id="btn" onclick="calcular()">Enviar</button>
+				<div hidden="true" id="resultado">
+					<table>
+						<tr>
+							<th colspan="2">PESO e IMC ATUAL</th>
+							<th colspan="2">PESO e IMC NECESSÁRIO</th>
+						</tr>
+						<tr>
+							<td id="valor1"></td>
+							<td id="valor2"></td>
+							<td id="valor3"></td>
+							<td id="valor4"></td>
+
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
